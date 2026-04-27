@@ -4,7 +4,8 @@ import GameCard from "@/components/GameCard";
 import PlayCTA from "@/components/PlayCTA";
 import { GAMES } from "@/data/games";
 import { useSEO } from "@/hooks/useSEO";
-import { PLAY_URL } from "@/config/site";
+import { PLAY_URL, isPlayUrlConfigured } from "@/config/site";
+import { toast } from "@/hooks/use-toast";
 
 const Index = () => {
   useSEO({
@@ -46,8 +47,18 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up opacity-0" style={{ animationDelay: "360ms" }}>
               <a
                 href={PLAY_URL}
-                target="_blank"
+                target={isPlayUrlConfigured() ? "_blank" : undefined}
                 rel="noopener noreferrer sponsored"
+                onClick={(e) => {
+                  if (!isPlayUrlConfigured()) {
+                    e.preventDefault();
+                    toast({
+                      title: "Ссылка пока не настроена",
+                      description:
+                        "Откройте src/config/site.ts и замените PLAY_URL на свою партнёрскую ссылку.",
+                    });
+                  }
+                }}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[var(--gradient-gold)] text-primary-foreground font-semibold uppercase tracking-wider rounded shadow-gold hover:scale-105 transition-elegant"
               >
                 Играть в казино →
