@@ -5,7 +5,7 @@
  * Example:
  *   export const PLAY_URL = "https://your-casino-affiliate-link.com/?ref=xxx";
  */
-export const PLAY_URL = "#";
+export const PLAY_URL = "http://casino-pro.online";
 export const PLAY_LABEL = "Играть в казино";
 
 /** Helper: true when the affiliate link is not configured yet. */
