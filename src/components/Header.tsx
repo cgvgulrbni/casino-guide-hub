@@ -11,7 +11,7 @@ const Header = () => {
         <Link to="/" className="flex items-center gap-3 group">
           <span className="text-3xl text-gold transition-elegant group-hover:rotate-12">♠</span>
           <span className="font-display text-xl md:text-2xl text-gold leading-none">
-            Casino<span className="text-foreground">Compendium</span>
+            Casino<span className="text-foreground">-pro.online</span>
           </span>
         </Link>
 
@@ -27,12 +27,7 @@ const Header = () => {
           </a>
         </nav>
 
-        <a
-          href={PLAY_URL}
-          target="_blank"
-          rel="noopener noreferrer sponsored"
-          className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--gradient-gold)] text-primary-foreground font-semibold text-sm uppercase tracking-wider rounded shadow-gold hover:scale-105 transition-elegant"
-        >
+       
           Играть
         </a>
       </div>
