@@ -1,16 +1,30 @@
-import { PLAY_URL } from "@/config/site";
+import { PLAY_URL, isPlayUrlConfigured } from "@/config/site";
+import { toast } from "@/hooks/use-toast";
+import type { MouseEvent } from "react";
 
 interface PlayCTAProps {
   variant?: "inline" | "banner";
   gameName?: string;
 }
 
+const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
+  if (!isPlayUrlConfigured()) {
+    e.preventDefault();
+    toast({
+      title: "Ссылка пока не настроена",
+      description:
+        "Откройте файл src/config/site.ts и замените PLAY_URL на свою партнёрскую ссылку.",
+    });
+  }
+};
+
 const PlayCTA = ({ variant = "banner", gameName }: PlayCTAProps) => {
   if (variant === "inline") {
     return (
       <a
         href={PLAY_URL}
-        target="_blank"
+        onClick={handleClick}
+        target={isPlayUrlConfigured() ? "_blank" : undefined}
         rel="noopener noreferrer sponsored"
         className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--gradient-gold)] text-primary-foreground font-semibold uppercase tracking-wider text-sm rounded shadow-gold hover:scale-105 transition-elegant"
       >
@@ -36,7 +50,8 @@ const PlayCTA = ({ variant = "banner", gameName }: PlayCTAProps) => {
         </p>
         <a
           href={PLAY_URL}
-          target="_blank"
+          onClick={handleClick}
+          target={isPlayUrlConfigured() ? "_blank" : undefined}
           rel="noopener noreferrer sponsored"
           className="inline-flex items-center gap-3 px-10 py-4 bg-[var(--gradient-gold)] text-primary-foreground font-semibold uppercase tracking-wider rounded shadow-gold hover:scale-105 hover:shadow-glow transition-elegant animate-glow-pulse"
         >
