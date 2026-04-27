@@ -63,12 +63,17 @@ const Index = () => {
               >
                 Играть в казино →
               </a>
-              <a
-                href="#games"
+              <button
+                type="button"
+                onClick={() => {
+                  document
+                    .getElementById("games")
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-gold/40 text-foreground font-semibold uppercase tracking-wider rounded hover:bg-gold/10 hover:border-gold transition-elegant"
               >
                 Смотреть игры
-              </a>
+              </button>
             </div>
           </div>
         </section>
