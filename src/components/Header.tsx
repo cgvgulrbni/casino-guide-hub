@@ -27,7 +27,12 @@ const Header = () => {
           </a>
         </nav>
 
-       
+        <a
+          href={PLAY_URL}
+          target="_blank"
+          rel="noopener noreferrer sponsored"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--gradient-gold)] text-primary-foreground font-semibold uppercase tracking-wider text-xs rounded shadow-gold hover:scale-105 transition-elegant"
+        >
           Играть
         </a>
       </div>
