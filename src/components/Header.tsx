@@ -31,7 +31,8 @@ const Header = () => {
           href={PLAY_URL}
           target="_blank"
           rel="noopener noreferrer sponsored"
-          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--gradient-gold)] text-primary-foreground font-semibold uppercase tracking-wider text-xs rounded shadow-gold hover:scale-105 transition-elegant"
+          style={{ background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)))" }}
+          className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 text-primary-foreground font-semibold uppercase tracking-wider text-xs rounded shadow-gold hover:scale-105 transition-elegant whitespace-nowrap"
         >
           Играть
         </a>
