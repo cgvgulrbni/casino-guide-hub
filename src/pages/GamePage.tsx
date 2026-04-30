@@ -13,7 +13,7 @@ const GamePage = () => {
   // Hooks must run unconditionally — call useSEO with safe defaults if no game
   useSEO({
     title: game
-      ? `${game.name} — правила, стратегии и история | CasinoCompendium`
+      ? `${game.name} — правила, стратегии и история | casino-pro.online`
       : "Игра не найдена",
     description: game
       ? `${game.name} в казино: ${game.shortDescription} Полный обзор: правила, стратегии, RTP ${game.rtp}, советы и FAQ.`
