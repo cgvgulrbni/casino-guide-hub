@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-t border-gold/10 py-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Casino-pro.online · Все права защищены вериф13
+        © {new Date().getFullYear()} Casino-pro.online · Все права защищены
       </div>
     </footer>
   );
