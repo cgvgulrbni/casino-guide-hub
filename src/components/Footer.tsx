@@ -8,7 +8,7 @@ const Footer = () => {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <span className="text-2xl text-gold">♠</span>
-            <span className="font-display text-xl text-gold">CasinoCompendium</span>
+            <span className="font-display text-xl text-gold">Casino-pro.online</span>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
             Энциклопедия казино-игр: история, правила, стратегии и советы для игроков всех уровней.
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-t border-gold/10 py-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} CasinoCompendium · Все права защищены
+        © {new Date().getFullYear()} Casino-pro.online · Все права защищены
       </div>
     </footer>
   );
