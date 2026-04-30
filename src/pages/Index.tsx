@@ -9,14 +9,14 @@ import { toast } from "@/hooks/use-toast";
 
 const Index = () => {
   useSEO({
-    title: "CasinoCompendium — Обзоры казино-игр: правила, история и стратегии",
+    title: "casino-pro.online — Обзоры казино-игр: правила, история и стратегии",
     description:
       "Подробные обзоры главных казино-игр: слоты, рулетка, блэкджек, покер, баккара и крэпс. Правила, стратегии, RTP и советы для игроков.",
     canonical: typeof window !== "undefined" ? window.location.href : undefined,
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: "CasinoCompendium",
+      name: "casino-pro.online",
       description:
         "Энциклопедия казино-игр с обзорами правил, историей и стратегиями игры.",
       inLanguage: "ru",
@@ -110,7 +110,7 @@ const Index = () => {
               Знание <span className="text-gold">— ваше преимущество</span>
             </h2>
             <p className="text-lg text-foreground/75 leading-relaxed mb-4">
-              CasinoCompendium создан для тех, кто хочет понимать, во что играет.
+              casino-pro.online создан для тех, кто хочет понимать, во что играет.
               Мы собрали историю, правила и проверенные стратегии каждой игры —
               чтобы каждый ваш визит в казино был осознанным.
             </p>
